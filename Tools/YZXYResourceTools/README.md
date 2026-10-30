@@ -1,39 +1,42 @@
-# YZXY Resource Tool Suite
+# YZXY 资源工具组
 
-这是一个基于 C# WinForms + .NET Framework 4.8 的工具组骨架，采用 MDI 多文档界面设计，适合后续扩展为：
+这是一个基于 C# WinForms + .NET Framework 4.8 的多文档资源管理工具，采用 MDI (Multiple Document Interface) 布局，适合用于：
 
-- 资源读取工具
-- 资源编辑工具
-- 资源打包/导出工具
-- 资源预览和批量处理
+- 读取资源目录
+- 浏览和筛选资源文件
+- 预览脚本/文本资源
+- 编辑可文本资源
+- 生成 ZIP 压缩资源包
 
 ## 目录结构
 
 - `YZXYResourceTools.csproj`：项目文件
-- `Program.cs`：入口文件
-- `MainForm.cs`：主窗体，负责 MDI 布局和菜单
+- `Program.cs`：应用入口
+- `MainForm.cs`：主窗体，负责 MDI 容器和菜单
 - `ResourceEditorForm.cs`：资源编辑器子窗体
 - `ResourcePackageForm.cs`：资源打包子窗体
-- `Models/ResourceItem.cs`：资源数据模型
-- `Services/ResourceService.cs`：资源管理服务
+- `Models/ResourceItem.cs`：资源文件模型
+- `Services/ResourceService.cs`：资源扫描和打包逻辑
 
-## 功能说明
+## 当前能力
 
-1. 主窗口使用 MDI 容器
-2. 支持多文档同屏显示
-3. 每个子窗口可以独立打开、移动、关闭
-4. 可作为后续游戏资源读取、编辑、打包的统一入口
+1. 打开任意资源目录
+2. 自动递归扫描资源文件
+3. 资源树和文件列表浏览
+4. .lua / .json / .txt / .xml 等文本文件直接预览和保存
+5. 二进制资源提示不可直接编辑
+6. 将整个资源目录打包成 ZIP
 
 ## 运行方式
 
-1. 使用 Visual Studio 2019/2022 打开项目
-2. 目标框架选择 .NET Framework 4.8
+1. 使用 Visual Studio 2022 或 2019 打开 `Tools/YZXYResourceTools/YZXYResourceTools.csproj`
+2. 确认目标框架为 `.NET Framework 4.8`
 3. 构建并运行
 
 ## 后续扩展建议
 
-- 资源文件扫描与列表展示
-- 资源导入/导出功能
-- Lua / XML / JSON / 图片资源支持
-- 批量打包器与加密/压缩选项
+- 扩展资源格式支持：PNG / Atlas / Map / Binary
+- 增加右键菜单：打开、复制路径、导出、重命名
+- 增加资源同步/导入导出功能
+- 接入 YZXY 实际游戏资源目录与打包格式
 
