@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace YZXYResourceTools
@@ -133,7 +136,7 @@ namespace YZXYResourceTools
         private void AboutMenu_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "YZXY 资源工具组\n\n基于 C# WinForms + .NET Framework 4.8\n采用 MDI 多文档布局\n支持资源目录扫描、预览、编辑和打包。",
+                "YZXY 资源工具组\n\n基于 C# WinForms + .NET Framework 4.8\n采用 MDI 多文档布局\n支持资源目录扫描、预览、编辑、搜索和打包。",
                 "关于",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
