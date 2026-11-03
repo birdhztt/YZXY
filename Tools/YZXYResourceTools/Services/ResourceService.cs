@@ -8,7 +8,7 @@ using YZXYResourceTools.Models;
 
 namespace YZXYResourceTools.Services
 {
-    public class ResourceService
+    public partial class ResourceService
     {
         private static readonly string[] IgnoredDirectoryNames = { ".git", ".vs", "bin", "obj" };
 
