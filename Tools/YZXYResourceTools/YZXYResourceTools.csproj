@@ -46,6 +46,7 @@
     <Compile Include="ResourcePackageForm.cs" />
     <Compile Include="Models\ResourceItem.cs" />
     <Compile Include="Services\ResourceService.cs" />
+    <Compile Include="Services\ResourceService.Packaging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
